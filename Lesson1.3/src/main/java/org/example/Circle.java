@@ -1,0 +1,27 @@
+package org.example;
+
+import java.util.Objects;
+
+public class Circle extends Figure {
+    private double radius;
+
+    public Circle() {
+        super();
+    }
+
+    public Circle(double radius) {
+        this.radius = radius;
+        this.square = square();
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Circle square = %.3f", square);
+    }
+
+
+    @Override
+    public double square() {
+        return scale(4 * Math.PI * (radius * radius));
+    }
+}
