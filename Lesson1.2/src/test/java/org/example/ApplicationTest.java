@@ -19,6 +19,8 @@ public class ApplicationTest {
      */
     @Test
     public void result() {
+        //Також можна прочитати з файлу і наповнити ліст цими стрічками з файлу,
+        // наприклад так само розпарсити кожну стрічку або комою або новою стрічкою і будуть окремі елементи ліста...
         List<String> strings = Arrays.asList("Hello #price #spring #price", "Profit, Lego", "#Lent port #spring", "#memory #film game", "#memory lesson #spring", "#price #overloaded", "#Lego #under file");
         Map<String, Integer> expected = new HashMap<>();
         expected.put("#spring", 3);
