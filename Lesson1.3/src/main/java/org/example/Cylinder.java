@@ -6,10 +6,6 @@ public class Cylinder extends Figure {
     private double radius;
     private double height;
 
-    public Cylinder() {
-        super();
-    }
-
     public Cylinder(double radius, double height) {
         this.radius = radius;
         this.height = height;

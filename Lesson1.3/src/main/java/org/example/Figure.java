@@ -12,13 +12,6 @@ public abstract class Figure implements Comparable<Figure> {
 
     abstract double square();
 
-    public double getSquare() {
-        return square;
-    }
-
-    public void setSquare(double square) {
-        this.square = square;
-    }
 
     protected double scale(double in){
         return BigDecimal.valueOf(in).setScale(3, RoundingMode.HALF_UP).doubleValue();

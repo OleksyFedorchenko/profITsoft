@@ -21,20 +21,31 @@ public class ApplicationTest
     @Test
     public void result()
     {
-        List<Figure> figures = Arrays.asList(new Cube(3),
+        List<Figure> figures = Arrays.asList(new Cylinder(2.3,5),
                 new Circle(3),
-                new Cylinder(2.3,5));
-        List<Figure> expected=new ArrayList<>();
-        Circle circle = new Circle();
-        circle.setSquare(113.097);
-        Cube cube = new Cube();
-        cube.setSquare(54.000);
-        Cylinder cylinder = new Cylinder();
-        cylinder.setSquare(72.257);
-        expected.add(cube);
-        expected.add(cylinder);
-        expected.add(circle);
+                new Cube(3));
+        List<Figure> expected=Arrays.asList(new Cube(3),new Cylinder(2.3,5),new Circle(3));
 
         assertEquals(expected, new Application().sorting(figures));
+    }
+
+    @Test
+    public void squareCube(){
+        double a=3;
+        double expected =54;
+        assertEquals(expected,new Cube(3).square(),0.0001);
+    }
+    @Test
+    public void squareCircle(){
+        double a=3;
+        double expected =113.097;
+        assertEquals(expected,new Circle(3).square(),0.0001);
+    }
+    @Test
+    public void squareCylinder(){
+        double r=2.3;
+        double h=5;
+        double expected =72.257;
+        assertEquals(expected,new Cylinder(2.3,5).square(),0.0001);
     }
 }

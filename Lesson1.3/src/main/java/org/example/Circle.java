@@ -5,9 +5,6 @@ import java.util.Objects;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle() {
-        super();
-    }
 
     public Circle(double radius) {
         this.radius = radius;

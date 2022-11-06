@@ -5,10 +5,6 @@ import java.util.Objects;
 public class Cube extends Figure {
     private double a; //length of a one side of cube
 
-    public Cube() {
-        super();
-    }
-
     public Cube(double a) {
         this.a = a;
         this.square = square();

@@ -4,9 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Application {
-
-
-    public Map<String,Integer> result(List<String> strings) {
+    public Map<String, Integer> result(List<String> strings) {
         //Фільтруєм кожен стрінг, щоб лишилися тільки хештеги,
         // і відповідно без дублікатів, бо це сет. Далі сет як елемент додаємо в наш ліст сетів стрінги.
         Set<String> setStrings;
@@ -27,13 +25,12 @@ public class Application {
                     result.put(st, result.get(st) + 1);
                 } else result.put(st, 1);
             }
-
         }
         //сортуємо мапу і виводимо топ 5 хештегів.
         return result.entrySet()
                 .stream()
                 .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
                 .limit(5)
-                .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue));
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 }
