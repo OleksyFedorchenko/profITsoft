@@ -19,11 +19,7 @@ public abstract class Figure implements Comparable<Figure> {
 
     @Override
     public int compareTo(Figure o) {
-        if (this.square == o.square) {
-            return 0;
-        } else if (this.square < o.square) {
-            return -1;
-        } else return 1;
+        return Double.compare(this.square, o.square);
     }
 
     @Override
