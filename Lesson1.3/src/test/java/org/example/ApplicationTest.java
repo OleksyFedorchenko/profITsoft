@@ -61,4 +61,12 @@ public class ApplicationTest {
         List<Figure> figures = new ArrayList<>();
         new Application().sorting(figures);
     }
+
+    @Test
+    public void listIsNull() {
+        exceptionRule.expect(NullPointerException.class);
+        exceptionRule.expectMessage("Figures cannot be NULL");
+        List<Figure> figures = null;
+        new Application().sorting(figures);
+    }
 }

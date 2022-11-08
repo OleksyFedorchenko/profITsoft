@@ -40,4 +40,11 @@ public class ApplicationTest {
         List<String> strings = new ArrayList<>();
         new Application().result(strings);
     }
+    @Test
+    public void listIsNull() {
+        exceptionRule.expect(NullPointerException.class);
+        exceptionRule.expectMessage("List cannot be NULL");
+        List<String> strings = null;
+        new Application().result(strings);
+    }
 }

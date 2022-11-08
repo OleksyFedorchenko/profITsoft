@@ -5,8 +5,11 @@ import java.util.stream.Collectors;
 
 public class Application {
     public Map<String, Integer> result(List<String> strings) {
-        if (strings.isEmpty()) throw new IndexOutOfBoundsException("List are empty");
-        else {
+        if (strings == null) {
+            throw new NullPointerException("List cannot be NULL");
+        } else if (strings.isEmpty()) {
+            throw new IndexOutOfBoundsException("List are empty");
+        } else {
             //Фільтруєм кожен стрінг, щоб лишилися тільки хештеги,
             // і відповідно без дублікатів, бо це сет. Далі сет як елемент додаємо в наш ліст сетів стрінги.
             Set<String> setStrings;
