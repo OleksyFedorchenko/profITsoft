@@ -9,7 +9,9 @@ import java.util.stream.Collectors;
 public class Application {
 
     public List<Figure> sorting(List<Figure> figures) {
-         return figures.stream().sorted().collect(Collectors.toList());
-
+        if (figures.isEmpty()) throw new IndexOutOfBoundsException("List cannot be empty");
+        else {
+            return figures.stream().sorted().collect(Collectors.toList());
+        }
     }
 }

@@ -7,10 +7,13 @@ import java.util.stream.Collectors;
 
 public class Application {
     public List<Integer> positive(Integer[] in) {
-        return Arrays.stream(in)
-                .filter(i -> i >= 0)
-                .sorted(Comparator.reverseOrder())
-                .collect(Collectors.toList());
+        if (in == null) throw new NullPointerException("Input data cannot be NULL");
+        else {
+            return Arrays.stream(in)
+                    .filter(i -> i >= 0)
+                    .sorted(Comparator.reverseOrder())
+                    .collect(Collectors.toList());
+        }
     }
 }
 

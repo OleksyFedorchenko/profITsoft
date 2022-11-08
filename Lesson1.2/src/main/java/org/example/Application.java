@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Application {
-    public Map<String, Integer> result(List<String> strings) throws IndexOutOfBoundsException {
+    public Map<String, Integer> result(List<String> strings) {
         if (strings.isEmpty()) throw new IndexOutOfBoundsException("List are empty");
         else {
             //Фільтруєм кожен стрінг, щоб лишилися тільки хештеги,
