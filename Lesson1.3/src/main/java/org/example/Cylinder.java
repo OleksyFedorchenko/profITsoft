@@ -1,8 +1,7 @@
 package org.example;
 
 public class Cylinder extends Figure {
-    private double radius;
-    private double height;
+    private double radius,height;
 
     public Cylinder(double radius, double height) {
         this.radius = radius;
