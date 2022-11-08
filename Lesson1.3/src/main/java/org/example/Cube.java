@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.Objects;
-
 public class Cube extends Figure {
     private double a; //length of a one side of cube
 

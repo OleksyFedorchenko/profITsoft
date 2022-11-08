@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.Objects;
-
 public class Cylinder extends Figure {
     private double radius;
     private double height;

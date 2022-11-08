@@ -15,7 +15,7 @@ public abstract class Figure implements Comparable<Figure> {
 
     protected double scale(double in){
         return BigDecimal.valueOf(in).setScale(3, RoundingMode.HALF_UP).doubleValue();
-    };
+    }
 
     @Override
     public int compareTo(Figure o) {
@@ -23,9 +23,7 @@ public abstract class Figure implements Comparable<Figure> {
             return 0;
         } else if (this.square < o.square) {
             return -1;
-        } else {
-            return 1;
-        }
+        } else return 1;
     }
 
     @Override
