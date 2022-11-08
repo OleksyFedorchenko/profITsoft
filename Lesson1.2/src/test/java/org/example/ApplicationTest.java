@@ -3,12 +3,11 @@ package org.example;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Unit test for simple App.
@@ -29,5 +28,16 @@ public class ApplicationTest {
         expected.put("#Lent", 1);
         expected.put("#overloaded", 1);
         assertEquals(expected, new Application().result(strings));
+    }
+
+    @Rule
+    public ExpectedException exceptionRule = ExpectedException.none();
+
+    @Test
+    public void resultThrowsException() {
+        exceptionRule.expect(IndexOutOfBoundsException.class);
+        exceptionRule.expectMessage("List are empty");
+        List<String> strings = new ArrayList<>();
+        new Application().result(strings);
     }
 }
