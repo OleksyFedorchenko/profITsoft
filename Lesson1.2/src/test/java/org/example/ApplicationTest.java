@@ -44,7 +44,6 @@ public class ApplicationTest {
     public void listIsNull() {
         exceptionRule.expect(NullPointerException.class);
         exceptionRule.expectMessage("List cannot be NULL");
-        List<String> strings = null;
-        new Application().result(strings);
+        new Application().result(null);
     }
 }

@@ -66,7 +66,6 @@ public class ApplicationTest {
     public void listIsNull() {
         exceptionRule.expect(NullPointerException.class);
         exceptionRule.expectMessage("Figures cannot be NULL");
-        List<Figure> figures = null;
-        new Application().sorting(figures);
+        new Application().sorting(null);
     }
 }
