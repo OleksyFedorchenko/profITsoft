@@ -20,7 +20,7 @@ public class Application {
                         .collect(Collectors.toSet());
                 if (!setStrings.isEmpty()) listSetStrings.add(setStrings);
             }
-            Map<String, Integer> result = new HashMap<>();
+            Map<String, Integer> result = new HashMap<>(5);
             //парсимо наш ліст сетів в мапу рахуючи кількість повторень.
             for (Set<String> s : listSetStrings) {
                 for (String st : s) {
