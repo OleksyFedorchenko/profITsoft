@@ -29,7 +29,6 @@ public class ApplicationTest {
     public void positiveInputDataIsNull() {
         exceptionRule.expect(NullPointerException.class);
         exceptionRule.expectMessage("Input data cannot be NULL");
-        Integer[] in = null;
-        new Application().positive(in);
+        new Application().positive(null);
     }
 }
