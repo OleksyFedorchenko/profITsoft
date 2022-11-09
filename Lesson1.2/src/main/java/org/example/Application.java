@@ -22,10 +22,8 @@ public class Application {
             }
             Map<String, Integer> result = new HashMap<>();
             //парсимо наш ліст сетів в мапу рахуючи кількість повторень.
-            for (Set<String> s : listSetStrings
-            ) {
-                for (String st : s
-                ) {
+            for (Set<String> s : listSetStrings) {
+                for (String st : s) {
                     if (result.containsKey(st)) {
                         result.put(st, result.get(st) + 1);
                     } else result.put(st, 1);
