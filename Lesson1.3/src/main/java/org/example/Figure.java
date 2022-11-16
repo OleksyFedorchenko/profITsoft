@@ -5,7 +5,6 @@ import java.math.RoundingMode;
 import java.util.Objects;
 
 public abstract class Figure implements Comparable<Figure> {
-     protected double square;
 
     public Figure() {
     }
@@ -19,7 +18,7 @@ public abstract class Figure implements Comparable<Figure> {
 
     @Override
     public int compareTo(Figure o) {
-        return Double.compare(this.square, o.square);
+        return Double.compare(this.square(), o.square());
     }
 
     @Override
@@ -27,11 +26,11 @@ public abstract class Figure implements Comparable<Figure> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Figure figure = (Figure) o;
-        return Double.compare(figure.square, square) == 0;
+        return Double.compare(figure.square(), square()) == 0;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(square);
+        return Objects.hash(square());
     }
 }

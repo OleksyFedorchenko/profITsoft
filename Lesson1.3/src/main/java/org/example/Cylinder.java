@@ -6,12 +6,11 @@ public class Cylinder extends Figure {
     public Cylinder(double radius, double height) {
         this.radius = radius;
         this.height = height;
-        this.square = square();
     }
 
     @Override
     public String toString() {
-        return String.format("Cylinder square = %.3f", square);
+        return String.format("Cylinder square = %.3f", square());
     }
 
     @Override

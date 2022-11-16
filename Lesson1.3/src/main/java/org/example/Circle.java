@@ -5,12 +5,11 @@ public class Circle extends Figure {
 
     public Circle(double radius) {
         this.radius = radius;
-        this.square = square();
     }
 
     @Override
     public String toString() {
-        return String.format("Circle square = %.3f", square);
+        return String.format("Circle square = %.3f", square());
     }
 
 

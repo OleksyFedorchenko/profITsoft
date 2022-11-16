@@ -5,12 +5,11 @@ public class Cube extends Figure {
 
     public Cube(double a) {
         this.a = a;
-        this.square = square();
     }
 
     @Override
     public String toString() {
-        return String.format("Cube square = %.3f", square);
+        return String.format("Cube square = %.3f", square());
     }
 
     @Override
