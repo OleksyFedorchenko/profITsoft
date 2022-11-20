@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Application {
-    public List<Integer> positive(Integer[] in) {
+    public List<Integer> getPositiveReverseSortedNumbers(Integer[] in) {
         if (in == null) throw new NullPointerException("Input data cannot be NULL");
         else {
             return Arrays.stream(in)

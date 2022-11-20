@@ -1,7 +1,8 @@
 package org.example;
 
 public class Cylinder extends Figure {
-    private double radius,height;
+    private final double radius;
+    private final double height;
 
     public Cylinder(double radius, double height) {
         this.radius = radius;
@@ -10,11 +11,11 @@ public class Cylinder extends Figure {
 
     @Override
     public String toString() {
-        return String.format("Cylinder square = %.3f", square());
+        return String.format("Cylinder square = %.3f", getSquare());
     }
 
     @Override
-    public double square() {
+    public double getSquare() {
         return scale(2 * Math.PI * radius * height);
     }
 }

@@ -16,10 +16,10 @@ public class ApplicationTest {
      * Rigorous Test :-)
      */
     @Test
-    public void positive() {
+    public void getPositiveReverseSortedNumbers() {
         Integer[] in = {2, -5, 7, 4, 3, -7, -4};
         List<Integer> expected = Arrays.asList(7, 4, 3, 2);
-        assertEquals(expected, new Application().positive(in));
+        assertEquals(expected, new Application().getPositiveReverseSortedNumbers(in));
     }
 
     @Rule
@@ -29,6 +29,6 @@ public class ApplicationTest {
     public void positiveInputDataIsNull() {
         exceptionRule.expect(NullPointerException.class);
         exceptionRule.expectMessage("Input data cannot be NULL");
-        new Application().positive(null);
+        new Application().getPositiveReverseSortedNumbers(null);
     }
 }

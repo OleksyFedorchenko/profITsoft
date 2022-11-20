@@ -9,7 +9,7 @@ public abstract class Figure implements Comparable<Figure> {
     public Figure() {
     }
 
-    abstract double square();
+    abstract double getSquare();
 
 
     protected double scale(double in){
@@ -18,7 +18,7 @@ public abstract class Figure implements Comparable<Figure> {
 
     @Override
     public int compareTo(Figure o) {
-        return Double.compare(this.square(), o.square());
+        return Double.compare(this.getSquare(), o.getSquare());
     }
 
     @Override
@@ -26,11 +26,11 @@ public abstract class Figure implements Comparable<Figure> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Figure figure = (Figure) o;
-        return Double.compare(figure.square(), square()) == 0;
+        return Double.compare(figure.getSquare(), getSquare()) == 0;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(square());
+        return Objects.hash(getSquare());
     }
 }
